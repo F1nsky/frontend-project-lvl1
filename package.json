@@ -1,12 +1,12 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "bin": {
+    "brain-even": "./bin/brain-even.js",
+    "brain-games": "./bin/brain-games.js"
+  },
   "type": "module",
   "description": "[![Actions Status](https://github.com/F1nsky/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/F1nsky/frontend-project-lvl1/actions)",
-  "bin": {
-    "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
-  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
