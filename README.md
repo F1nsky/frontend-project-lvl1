@@ -3,4 +3,6 @@
 
 "!https://api.codeclimate.com/v1/badges/de025cc30039fcbe3955/maintainability!":https://codeclimate.com/github/F1nsky/frontend-project-lvl1/maintainability
 
-Stage 5 task asciinema: https://asciinema.org/a/2BKoxL5IU3yybZKABK2P5h7bS
+Stage 5 game brain-even asciinema: https://asciinema.org/a/2BKoxL5IU3yybZKABK2P5h7bS
+
+Stage 6 game brain-calc aciinema: https://asciinema.org/a/gFWKW6RFec7ckzYw5sFCT9CdQ
