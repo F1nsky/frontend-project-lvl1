@@ -10,3 +10,5 @@ Stage 6 game brain-calc aciinema: https://asciinema.org/a/gFWKW6RFec7ckzYw5sFCT9
 Stage 7 game brain-gcd aciinema: https://asciinema.org/a/QpiQ3rhfBisIuB6eXoYSOxOWV
 
 Stage 8 game brain-progression aciinema: https://asciinema.org/a/cEcVQuYcRhXWFIxZkE9kBDn4j
+
+Stage 9 game brain-prime aciinema: https://asciinema.org/a/K8Ueuua4lB9ErA2MlYhqmJGBw
