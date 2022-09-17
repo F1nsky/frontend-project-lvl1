@@ -10,4 +10,4 @@ console.log('Welcome to the Brain Games!');
 
 // задаем вопрос 'May I have your name?' и
 // подставляем ответ в текст 'Hello,...'
-console.log(`Hello, ${getUserName('May I have your name?')}!`);
+console.log(`Hello, ${getUserName('May I have your name? ')}!`);
