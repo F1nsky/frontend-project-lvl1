@@ -7,6 +7,7 @@ export const rulesDescription = 'What is the result of the expression?';
 // объявляем константу производящую вычисление правильного ответа
 const getCorrectAnswer = (randomNum1, randomNum2, randomOperator) => {
   // вычисляем результат случайного выражения с помощью метода "eval"
+  // eslint-disable-next-line no-eval
   const evaluation = eval(`${randomNum1} ${randomOperator} ${randomNum2}`);
   // округляем результат до десятых
   return Math.round(((evaluation) + Number.EPSILON) * 10) / 10;
