@@ -5,11 +5,11 @@ import getRandomNum from './getRandomNum.js';
 // экспортируем функцию возвращающую случайный математический оператор
 export default () => {
   // создаем массив с операторами
-  const operators = ['+', '-', '*', '/'];
+  const operators = ['+', '-', '*'];
   // объявляем переменную для сохранения результата
   let result;
   // объявляем константу возвращающую случайное число
-  const num = getRandomNum(0, 40);
+  const num = getRandomNum(0, 30);
 
   // в зависимости от значения случайного числа
   // возвращаем элемент массива, который является мат.оператором
@@ -19,8 +19,6 @@ export default () => {
     result = operators[1];
   } else if (num > 20 && num <= 30) {
     result = operators[2];
-  } else if (num > 30) {
-    result = operators[3];
   }
   return result;
 };
