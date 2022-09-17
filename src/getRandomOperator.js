@@ -1,23 +1,25 @@
+/* eslint-disable prefer-destructuring */
+// импортируем функцию получения случайного числа из файла 'getRandomNum.js'
 import getRandomNum from './getRandomNum.js';
 
+// экспортируем функцию возвращающую случайный математический оператор
 export default () => {
+  // создаем массив с операторами
   const operators = ['+', '-', '*', '/'];
-  let result = '';
+  // объявляем переменную для сохранения результата
+  let result;
+  // объявляем константу возвращающую случайное число
   const num = getRandomNum(0, 40);
 
+  // в зависимости от значения случайного числа
+  // возвращаем элемент массива, который является мат.оператором
   if (num <= 10) {
     result = operators[0];
-  }
-
-  if (num > 10 && num <= 20) {
+  } else if (num > 10 && num <= 20) {
     result = operators[1];
-  }
-
-  if (num > 20 && num <= 30) {
+  } else if (num > 20 && num <= 30) {
     result = operators[2];
-  }
-
-  if (num > 30) {
+  } else if (num > 30) {
     result = operators[3];
   }
   return result;
