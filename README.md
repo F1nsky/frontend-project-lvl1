@@ -12,8 +12,8 @@ Stage 8 game brain-progression aciinema: https://asciinema.org/a/cEcVQuYcRhXWFIx
 
 Stage 9 game brain-prime aciinema: https://asciinema.org/a/K8Ueuua4lB9ErA2MlYhqmJGBw
 
-# Игра: "Проверка на чётность"
-Игроку показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное:
+# Game: "Parity check"
+A random number is shown to the player. The user must answer yes if the number is even, or no if it is odd:
 ```
 Welcome to the Brain Games!
 May I have your name? Bill
@@ -22,22 +22,22 @@ Answer "yes" if the number is even, otherwise answer "no".
 Question: 15
 Your answer: yes
 ```
-В случае, если пользователь даст неверный ответ, необходимо вывести:
+In case the user gives the wrong answer, it is displayed:
 ```
 'yes' is wrong answer ;(. Correct answer was 'no'.
 Let's try again, Bill!
 ```
-и завершить игру. В случае, если пользователь ввел верный ответ, нужно отобразить:
+And terminates the game. In case the user has typed the correct answer, it is displayed:
 ```
 Correct!
 ```
-и приступить к следующему числу.
+and proceeds to the next number.
 
-Пользователь должен дать правильный ответ на три вопроса подряд. После успешной игры нужно вывести:
+The user must give the correct answer three times in a row. After a successful game is displayed:
 ```
 Congratulations, Bill!
 ```
-Вывод должен получиться следующий:
+The conclusion comes as follows:
 ```
 $ brain-even
 
@@ -56,12 +56,12 @@ Your answer: no
 Correct!
 Congratulations, Sam!
 ```
-- Любой некорректный ввод считается ошибкой (например, n) и равносилен неправильному ответу.
+- Any incorrect input is considered an error (e.g., n) and is equivalent to a wrong answer.
 
-# Игра: "Калькулятор"
-Игроку показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
+# Game: "Calculator"
+A random mathematical expression, such as 35 + 16, is shown to the player to calculate and write down the correct answer.
 
-Вывод должен получиться следующий:
+The conclusion should be as follows:
 ```
 $ brain-calc
 
@@ -80,22 +80,22 @@ Your answer: 175
 Correct!
 Congratulations, Sam!
 ```
-- Достаточно реализовать следующие операции: +, - и *.
-- Операции, как и числа, выбираются случайным образом.
+- The following operations are involved: +, - and *.
+- The operations, as well as the numbers, are chosen randomly.
 
-В случае, если пользователь даст неверный ответ, необходимо вывести:
+In case the user gives the wrong answer, it is displayed:
 ```
 Question: 25 * 7
 Your answer: 145
 '145' is wrong answer ;(. Correct answer was '175'.
 Let's try again, Sam!
 ```
-и завершить игру.
+And terminates the game.
 
-# Игра "НОД"
-Игроку показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+# Game "GCD"
+Two random numbers are shown to the player, e.g., 25 50. The user must calculate and enter the greatest common divisor of these numbers.
 
-Вывод должен получиться следующий:
+The output should be as follows:
 ```
 $ brain-gcd
 
@@ -114,19 +114,20 @@ Your answer: 3
 Correct!
 Congratulations, Sam!
 ```
-В случае, если пользователь даст неверный ответ, необходимо вывести:
+In case the user gives the wrong answer, it is displayed:
 ```
 Question: 25 50
 Your answer: 1
 '1' is wrong answer ;(. Correct answer was '25'.
 Let's try again, Sam!
 ```
-# Игра "Арифметическая прогрессия"
-Игроку показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
+# Game "Arithmetic progression"
+The number series that forms an arithmetic progression is shown to the player, replacing any of the numbers with two dots. The player must define this number.
 
-Рекомендуемая длина прогрессии – 10 чисел. Длина может генерироваться случайным образом, но должна содержать не менее 5-ти чисел!
-Позиция спрятанного элемента каждый раз изменяется (выбирается случайным образом).
-Пример:
+The maximum length of the progression is 10 numbers. The length is randomly generated, but contains at least 5 numbers.
+The position of the hidden element changes randomly each time.
+
+Example:
 ```
 $ brain-progression
 
@@ -145,15 +146,15 @@ Your answer: 59
 Correct!
 Congratulations, Sam!
 ```
-В случае, если пользователь даст неверный ответ, необходимо вывести:
+In case the user gives the wrong answer, it is displayed:
 ```
 Question: 5 7 9 11 13 .. 17 19 21 23
 Your answer: 1
 '1' is wrong answer ;(. Correct answer was '15'.
 Let's try again, Sam!
 ```
-# Игра "Простое ли число?"
-Игроку показывается случайное число. И ему нужно ответить yes, если число простое, или no — если сложное:
+# Game "Is it a prime number?"
+A random number is shown to the player. The user must answer yes if the number is prime, or no if it is complex.
 ```
 $ brain-prime
 
@@ -165,4 +166,4 @@ Question: 7
 Your answer: yes
 Correct!
 ```
-Весь вывод и логика в случае правильного и неправильного ответа повторяют предыдущие шаги.
+The whole conclusion and logic in this game repeat the previous games.
