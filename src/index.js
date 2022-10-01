@@ -33,10 +33,9 @@ export default (rulesDescription, getCorrectAnswer) => {
       // объявляем корректный ответ
       const correctAnswer = getCorrectAnswer(randomNum1, randomNum2);
       // задаем вопрос 'Question:' и подставлем ответ в текст 'Your answer: {ответ пользователя}'
-      const question = getAnswer(`Question: ${randomNum1} ${randomNum2} `);
-      console.log(`Your answer: ${question}`);
+      const userAnswer = getAnswer(`Question: ${randomNum1} ${randomNum2} `);
+      console.log(`Your answer: ${userAnswer}`);
       // объявляем ответ пользователя
-      const userAnswer = question;
 
       // проверяем корректный ли ответ пользователя или нет
       // в зависимости от результата проверки отображаем подготовленный текст
@@ -67,11 +66,8 @@ export default (rulesDescription, getCorrectAnswer) => {
       const correctAnswer = getCorrectAnswer(randomNum1, randomNum2, randomOperator);
 
       // задаем вопрос 'Question:' и подставлем ответ в текст 'Your answer: {ответ пользователя}'
-      const question = getAnswer(`Question: ${randomNum1} ${randomOperator} ${randomNum2} `);
-      console.log(`Your answer: ${question}`);
-
-      // объявляем ответ пользователя
-      const userAnswer = question;
+      const userAnswer = getAnswer(`Question: ${randomNum1} ${randomOperator} ${randomNum2} `);
+      console.log(`Your answer: ${userAnswer}`);
 
       // проверяем корректный ли ответ пользователя или нет
       // в зависимости от результата проверки отображаем подготовленный текст
@@ -118,11 +114,8 @@ export default (rulesDescription, getCorrectAnswer) => {
       const questionPrep = addHiddenItem.replaceAll(',', ' ');
 
       // задаем вопрос 'Question:' и подставлем ответ в текст 'Your answer: {ответ пользователя}'
-      const question = getAnswer(`Question: ${questionPrep} `);
-      console.log(`Your answer: ${question}`);
-
-      // объявляем ответ пользователя
-      const userAnswer = question;
+      const userAnswer = getAnswer(`Question: ${questionPrep} `);
+      console.log(`Your answer: ${userAnswer}`);
 
       // проверяем корректный ли ответ пользователя или нет
       // в зависимости от результата проверки отображаем подготовленный текст
@@ -150,11 +143,8 @@ export default (rulesDescription, getCorrectAnswer) => {
       const correctAnswer = getCorrectAnswer(randomNum);
 
       // задаем вопрос 'Question:' и подставлем ответ в текст 'Your answer: {ответ пользователя}'
-      const question = getAnswer(`Question: ${randomNum} `);
-      console.log(`Your answer: ${question}`);
-
-      // объявляем ответ пользователя
-      const userAnswer = question;
+      const userAnswer = getAnswer(`Question: ${randomNum} `);
+      console.log(`Your answer: ${userAnswer}`);
 
       // проверяем корректный ли ответ пользователя или нет
       // в зависимости от результата проверки отображаем подготовленный текст
