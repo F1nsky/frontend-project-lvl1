@@ -9,15 +9,15 @@ export default () => {
   // объявляем переменную для сохранения результата
   let result;
   // объявляем константу возвращающую случайное число
-  const num = getRandomNum(0, 30);
+  const num = getRandomNum(0, 3);
 
   // в зависимости от значения случайного числа
   // возвращаем элемент массива, который является мат.оператором
-  if (num <= 10) {
+  if (num <= 1) {
     result = operators[0];
-  } else if (num > 10 && num <= 20) {
+  } else if (num > 1 && num <= 2) {
     result = operators[1];
-  } else if (num > 20 && num <= 30) {
+  } else if (num > 2 && num <= 3) {
     result = operators[2];
   }
   return result;
