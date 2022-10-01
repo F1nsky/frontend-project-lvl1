@@ -5,15 +5,7 @@ import gameEngine from '../index.js';
 export const rulesDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // объявляем константу производящую вычисление правильного ответа
-const getCorrectAnswer = (randomNum) => {
-  // если остаток от деления случайного числа на 2 равен нулю,
-  // значит число четное, возвращаем 'yes'
-  if (randomNum % 2 === 0) {
-    return 'yes';
-  }
-  // в других случаях возвращаем 'no'
-  return 'no';
-};
+const getCorrectAnswer = (randomNum) => (randomNum % 2 === 0 ? 'yes' : 'no');
 
 // экспортируем игру gameEven
 // с логикой gameEngine для которой указаны параметры (rulesDescription, getCorrectAnswer)
