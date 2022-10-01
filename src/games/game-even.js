@@ -2,7 +2,7 @@
 import gameEngine from '../index.js';
 
 // экспортируем текст правил игры
-export const rulesDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+export const rulesDescription = 'Answer "yes" if number even otherwise answer "no".';
 
 // объявляем константу производящую вычисление правильного ответа
 const getCorrectAnswer = (randomNum) => (randomNum % 2 === 0 ? 'yes' : 'no');
