@@ -2,7 +2,7 @@
 import gameEngine from '../index.js';
 
 // экспортируем текст правил игры
-export const rulesDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+export const rulesDescription = "'Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
 // объявляем переменную в которую сохраняется правильный ответ
 // по умолчанию в ней указан ответ 'yes'
