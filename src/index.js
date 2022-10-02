@@ -146,10 +146,8 @@ export default (rulesDescription, getCorrectAnswer) => {
       const correctAnswer = getCorrectAnswer(randomNum);
 
       // задаем вопрос 'Question:' и подставлем ответ в текст 'Your answer: {ответ пользователя}'
-      const question = getAnswer(`Question: ${randomNum} `);
-      console.log(`Your answer: ${question}`);
-
-      const userAnswer = question;
+      const userAnswer = getAnswer(`Question: ${randomNum} `);
+      console.log(`Your answer: ${userAnswer}`);
 
       // проверяем корректный ли ответ пользователя или нет
       // в зависимости от результата проверки отображаем подготовленный текст
