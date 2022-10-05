@@ -24,4 +24,4 @@ const getCorrectAnswer = () => {
   return result;
 };
 
-export const gamePrime = () => gameEngine(question, getCorrectAnswer);
+export default () => gameEngine(question, getCorrectAnswer);
