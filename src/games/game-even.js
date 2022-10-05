@@ -8,7 +8,7 @@ let randomNum;
 
 const question = () => {
   randomNum = getRandomNum();
-  return getAnswer(`Quetion: ${randomNum} `);
+  return getAnswer(`Question: ${randomNum} `);
 };
 
 const getCorrectAnswer = () => {
