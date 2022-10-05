@@ -19,4 +19,4 @@ const getCorrectAnswer = () => {
   return result;
 };
 
-export const gameEven = () => gameEngine(question, getCorrectAnswer);
+export default () => gameEngine(question, getCorrectAnswer);
