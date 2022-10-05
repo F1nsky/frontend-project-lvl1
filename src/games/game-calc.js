@@ -1,12 +1,37 @@
-// импортируем логику из файла 'index.js'
-import gameEngine from '../index.js';
+import gameEngine from '../index-test.js';
+import getAnswer from '../cli.js';
+import getRandomNum from '../getRandomNum.js';
 
-// экспортируем текст правил игры
-export const rulesDescription = 'What is the result of the expression?';
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  const [a, b, c] = operators;
+  let result;
+  const num = getRandomNum(0, 30);
+  if (num <= 1) {
+    result = a;
+  } else if (num > 1 && num <= 20) {
+    result = b;
+  } else if (num > 2 && num <= 30) {
+    result = c;
+  }
+  return result;
+};
 
-// объявляем константу производящую вычисление правильного ответа
-const getCorrectAnswer = (randomNum1, randomNum2, randomOperator) => {
-  // вычисляем результат случайного выражения
+console.log('What is the result of the expression?');
+
+let randomNum1;
+let randomNum2;
+let randomOperator;
+
+const question = () => {
+  randomNum1 = getRandomNum();
+  randomNum2 = getRandomNum();
+  randomOperator = getRandomOperator();
+  const result = getAnswer(`Question: ${randomNum1} ${randomOperator} ${randomNum2} `);
+  return result;
+};
+
+const getCorrectAnswer = () => {
   switch (randomOperator) {
     case '+':
       return randomNum1 + randomNum2;
@@ -19,6 +44,4 @@ const getCorrectAnswer = (randomNum1, randomNum2, randomOperator) => {
   }
 };
 
-// экспортируем игру gameCalc
-// с логикой gameEngine для которой указаны параметры (rulesDescription, getCorrectAnswer)
-export const gameCalc = () => gameEngine(rulesDescription, getCorrectAnswer);
+export const gameCalc = () => gameEngine(question, getCorrectAnswer);
