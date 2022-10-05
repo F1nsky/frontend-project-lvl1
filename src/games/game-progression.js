@@ -37,4 +37,4 @@ const question = () => {
 
 const getCorrectAnswer = () => randomArray[replaceIndex];
 
-export const gameProgression = () => gameEngine(question, getCorrectAnswer);
+export default () => gameEngine(question, getCorrectAnswer);
