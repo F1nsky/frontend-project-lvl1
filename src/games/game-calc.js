@@ -1,4 +1,4 @@
-import gameEngine from '../index-test.js';
+import gameEngine from '../index.js';
 import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
