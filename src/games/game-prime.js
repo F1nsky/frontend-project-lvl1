@@ -2,7 +2,7 @@ import gameEngine from '../index.js';
 import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
-console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
 let randomNum;
 
