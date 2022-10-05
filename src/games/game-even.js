@@ -2,7 +2,7 @@ import gameEngine from '../index.js';
 import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
-console.log("Answer 'yes' if number even otherwise answer 'no'.");
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 let randomNum;
 
