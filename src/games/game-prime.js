@@ -1,4 +1,4 @@
-import gameEngine from '../index-test.js';
+import gameEngine from '../index.js';
 import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
@@ -8,8 +8,7 @@ let randomNum;
 
 const question = () => {
   randomNum = getRandomNum();
-  const result = getAnswer(`Question: ${randomNum} `);
-  return result;
+  return getAnswer(`Question: ${randomNum} `);
 };
 
 const getCorrectAnswer = () => {
