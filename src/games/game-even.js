@@ -1,12 +1,23 @@
-// импортируем логику из файла 'index.js'
-import gameEngine from '../index.js';
+import gameEngine from '../index-test.js';
+import getAnswer from '../cli.js';
+import getRandomNum from '../getRandomNum.js';
 
-// экспортируем текст правил игры
-export const rulesDescription = "Answer 'yes' if number even otherwise answer 'no'.";
+console.log("Answer 'yes' if number even otherwise answer 'no'.");
 
-// объявляем константу производящую вычисление правильного ответа
-const getCorrectAnswer = (randomNum) => (randomNum % 2 === 0 ? 'yes' : 'no');
+let randomNum;
 
-// экспортируем игру gameEven
-// с логикой gameEngine для которой указаны параметры (rulesDescription, getCorrectAnswer)
-export const gameEven = () => gameEngine(rulesDescription, getCorrectAnswer);
+const question = () => {
+  randomNum = getRandomNum();
+  const result = getAnswer(`Quetion: ${randomNum} `);
+  return result;
+};
+
+const getCorrectAnswer = () => {
+  let result = 'no';
+  if (randomNum % 2 === 0) {
+    result = 'yes';
+  }
+  return result;
+};
+
+export const gameEven = () => gameEngine(question, getCorrectAnswer);
