@@ -44,4 +44,4 @@ const getCorrectAnswer = () => {
   }
 };
 
-export const gameCalc = () => gameEngine(question, getCorrectAnswer);
+export default () => gameEngine(question, getCorrectAnswer);
