@@ -23,4 +23,4 @@ const getCorrectAnswer = () => {
   return randomNum1;
 };
 
-export const gameGrComDiv = () => gameEngine(question, getCorrectAnswer);
+export default () => gameEngine(question, getCorrectAnswer);
