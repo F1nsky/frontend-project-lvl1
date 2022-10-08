@@ -10,16 +10,15 @@ const generateRound = () => {
   const question = () => getAnswer(`Question: ${randomNum} `);
 
   const getCorrectAnswer = () => {
-    let result = 'yes';
     if (randomNum <= 1) {
-      result = 'no';
+      return 'no';
     }
     for (let i = 2; i < Math.sqrt(randomNum); i += 1) {
       if (randomNum % i === 0) {
-        result = 'no';
+        return 'no';
       }
     }
-    return result;
+    return 'yes';
   };
   return [question(), getCorrectAnswer()];
 };
