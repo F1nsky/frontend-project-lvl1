@@ -15,7 +15,7 @@ const generateRound = () => {
       result = 'no';
     }
     for (let i = 2; i < Math.sqrt(randomNum); i += 1) {
-      if (randomNum % i === 0 || randomNum <= 1) {
+      if (randomNum % i === 0) {
         result = 'no';
       }
     }
