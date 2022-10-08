@@ -5,16 +5,11 @@ import getRandomNum from '../getRandomNum.js';
 console.log('What number is missing in the progression?');
 
 const generateRound = () => {
-  let firstItem;
-  let increment;
-  let progressionLength;
-  let randomArray;
-  let replaceIndex;
+  const firstItem = getRandomNum();
+  const increment = getRandomNum();
+  const progressionLength = getRandomNum(5, 10);
 
   const getRandomArray = () => {
-    firstItem = getRandomNum();
-    increment = getRandomNum();
-    progressionLength = getRandomNum(5, 10);
     const array = [firstItem];
     for (let i = 1; array.length <= progressionLength; i += 1) {
       array[i] = array[i - 1] + increment;
@@ -22,10 +17,11 @@ const generateRound = () => {
     return array;
   };
 
+  const randomArray = getRandomArray();
+  const replaceIndex = getRandomNum(0, progressionLength);
+
   const question = () => {
-    randomArray = getRandomArray();
     const progression = [...randomArray];
-    replaceIndex = getRandomNum(0, progressionLength);
 
     const randomHiddenItem = () => {
       progression.splice(replaceIndex, 1, '..');
