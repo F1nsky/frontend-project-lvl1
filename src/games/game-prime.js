@@ -6,9 +6,7 @@ console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
 const generateRound = () => {
   const randomNum = getRandomNum();
-
   const question = () => getAnswer(`Question: ${randomNum} `);
-
   const getCorrectAnswer = () => {
     let result = 'yes';
     if (randomNum <= 1) {
