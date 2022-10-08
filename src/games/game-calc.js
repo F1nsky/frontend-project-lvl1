@@ -3,18 +3,14 @@ import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
 const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  const [a, b, c] = operators;
-  let result;
-  const num = getRandomNum(0, 30);
-  if (num <= 1) {
-    result = a;
-  } else if (num > 1 && num <= 20) {
-    result = b;
-  } else if (num > 2 && num <= 30) {
-    result = c;
-  }
-  return result;
+  const operators = {
+    0: '+',
+    1: '-',
+    2: '*',
+  };
+  const num = getRandomNum(0, 2);
+
+  return operators[num];
 };
 
 console.log('What is the result of the expression?');
@@ -32,16 +28,12 @@ const question = () => {
 };
 
 const getCorrectAnswer = () => {
-  switch (randomOperator) {
-    case '+':
-      return randomNum1 + randomNum2;
-    case '-':
-      return randomNum1 - randomNum2;
-    case '*':
-      return randomNum1 * randomNum2;
-    default:
-      return 0;
-  }
+  const expressions = {
+    '+': randomNum1 + randomNum2,
+    '-': randomNum1 - randomNum2,
+    '*': randomNum1 * randomNum2,
+  };
+  return expressions[randomOperator];
 };
 
 export default () => gameEngine(question, getCorrectAnswer);
