@@ -4,19 +4,17 @@ import getRandomNum from '../getRandomNum.js';
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-let randomNum;
+const generateRound = () => {
+  let randomNum;
 
-const question = () => {
-  randomNum = getRandomNum();
-  return getAnswer(`Question: ${randomNum} `);
+  const question = () => {
+    randomNum = getRandomNum();
+    return getAnswer(`Question: ${randomNum} `);
+  };
+
+  const getCorrectAnswer = () => (randomNum % 2 === 0 ? 'yes' : 'no');
+
+  return [question(), getCorrectAnswer()];
 };
 
-const getCorrectAnswer = () => {
-  let result = 'no';
-  if (randomNum % 2 === 0) {
-    result = 'yes';
-  }
-  return result;
-};
-
-export default () => gameEngine(question, getCorrectAnswer);
+export default () => gameEngine(generateRound);
