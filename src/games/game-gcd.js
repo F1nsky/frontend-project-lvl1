@@ -5,15 +5,10 @@ import getRandomNum from '../getRandomNum.js';
 console.log('Find the greatest common divisor of given numbers.');
 
 const generateRound = () => {
-  let randomNum1;
-  let randomNum2;
+  let randomNum1 = getRandomNum();
+  let randomNum2 = getRandomNum();
 
-  const question = () => {
-    randomNum1 = getRandomNum();
-    randomNum2 = getRandomNum();
-    const result = getAnswer(`Question: ${randomNum1} ${randomNum2} `);
-    return result;
-  };
+  const question = () => getAnswer(`Question: ${randomNum1} ${randomNum2} `);
 
   const getCorrectAnswer = () => {
     while (randomNum2) {
