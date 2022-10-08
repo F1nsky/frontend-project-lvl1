@@ -11,6 +11,9 @@ const generateRound = () => {
 
   const getCorrectAnswer = () => {
     let result = 'yes';
+    if (randomNum <= 1) {
+      result = 'no';
+    }
     for (let i = 2; i < Math.sqrt(randomNum); i += 1) {
       if (randomNum % i === 0 || randomNum <= 1) {
         result = 'no';
