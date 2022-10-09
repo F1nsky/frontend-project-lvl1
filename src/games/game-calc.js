@@ -16,27 +16,20 @@ const generateRound = () => {
 
   console.log('What is the result of the expression?');
 
-  let randomNum1;
-  let randomNum2;
-  let randomOperator;
+  const randomNum1 = getRandomNum();
+  const randomNum2 = getRandomNum();
+  const randomOperator = getRandomOperator();
 
-  const question = () => {
-    randomNum1 = getRandomNum();
-    randomNum2 = getRandomNum();
-    randomOperator = getRandomOperator();
-    const result = getAnswer(`Question: ${randomNum1} ${randomOperator} ${randomNum2} `);
-    return result;
-  };
+  const question = getAnswer(`Question: ${randomNum1} ${randomOperator} ${randomNum2} `);
 
-  const getCorrectAnswer = () => {
-    const expressions = {
-      '+': randomNum1 + randomNum2,
-      '-': randomNum1 - randomNum2,
-      '*': randomNum1 * randomNum2,
-    };
-    return expressions[randomOperator];
+  const expressions = {
+    '+': randomNum1 + randomNum2,
+    '-': randomNum1 - randomNum2,
+    '*': randomNum1 * randomNum2,
   };
-  return [question(), getCorrectAnswer()];
+  const correctAnswer = expressions[randomOperator];
+
+  return [question, correctAnswer];
 };
 
 export default () => gameEngine(generateRound);
