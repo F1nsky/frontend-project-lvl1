@@ -8,17 +8,16 @@ const generateRound = () => {
   let randomNum1 = getRandomNum();
   let randomNum2 = getRandomNum();
 
-  const question = () => getAnswer(`Question: ${randomNum1} ${randomNum2} `);
+  const question = getAnswer(`Question: ${randomNum1} ${randomNum2} `);
 
-  const getCorrectAnswer = () => {
-    while (randomNum2) {
-      const temp = randomNum2;
-      randomNum2 = randomNum1 % randomNum2;
-      randomNum1 = temp;
-    }
-    return randomNum1;
-  };
-  return [question(), getCorrectAnswer()];
+  while (randomNum2) {
+    const temp = randomNum2;
+    randomNum2 = randomNum1 % randomNum2;
+    randomNum1 = temp;
+  }
+  const correctAnswer = randomNum1;
+
+  return [question, correctAnswer];
 };
 
 export default () => gameEngine(generateRound);
