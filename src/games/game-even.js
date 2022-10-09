@@ -6,10 +6,10 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const generateRound = () => {
   const randomNum = getRandomNum();
-  const question = () => getAnswer(`Question: ${randomNum} `);
-  const getCorrectAnswer = () => (randomNum % 2 === 0 ? 'yes' : 'no');
+  const question = getAnswer(`Question: ${randomNum} `);
+  const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';
 
-  return [question(), getCorrectAnswer()];
+  return [question, correctAnswer];
 };
 
 export default () => gameEngine(generateRound);
