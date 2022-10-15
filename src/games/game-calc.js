@@ -14,8 +14,6 @@ const generateRound = () => {
     return operators[num];
   };
 
-  console.log('What is the result of the expression?');
-
   const randomNum1 = getRandomNum();
   const randomNum2 = getRandomNum();
   const randomOperator = getRandomOperator();
@@ -32,4 +30,4 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameEngine(generateRound);
+export default () => gameEngine(generateRound, 'What is the result of the expression?');
