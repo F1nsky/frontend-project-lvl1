@@ -9,18 +9,12 @@ const generateRound = () => {
   const question = getAnswer(`Question: ${randomNum1} ${randomNum2} `);
 
   const findGCD = (num1, num2) => {
-    let param1 = num1;
-    let param2 = num2;
-    while (param2) {
-      const temp = param2;
-      param2 = param1 % param2;
-      param1 = temp;
+    if (!num2) {
+      return num1;
     }
-    return param1;
+    return findGCD(num2, num1 % num2);
   };
-
   const correctAnswer = findGCD(randomNum1, randomNum2);
-
   return [question, correctAnswer];
 };
 
