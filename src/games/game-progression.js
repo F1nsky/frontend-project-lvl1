@@ -15,9 +15,9 @@ const generateRound = () => {
   const step = getRandomNum();
   const end = getRandomNum(5, 10);
 
-  const aRandom = getProgression(start, step, end);
+  const randomProgression = getProgression(start, step, end);
   const indexToReplace = getRandomNum(0, end);
-  const progression = [...aRandom];
+  const progression = [...randomProgression];
   const getRandomHiddenItem = () => {
     progression.splice(indexToReplace, 1, '..');
     return progression.toString().replaceAll(',', ' ');
@@ -25,7 +25,7 @@ const generateRound = () => {
   const processedQuestion = getRandomHiddenItem();
 
   const question = getAnswer(`Question: ${processedQuestion} `);
-  const correctAnswer = aRandom[indexToReplace];
+  const correctAnswer = randomProgression[indexToReplace];
 
   return [question, correctAnswer];
 };
