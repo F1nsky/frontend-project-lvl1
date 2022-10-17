@@ -19,4 +19,6 @@ export default (generateRound, description) => {
       console.log(`Congratulations, ${userName}!`);
     }
   }
+  // eslint-disable-next-line consistent-return, no-useless-return
+  return;
 };
