@@ -6,7 +6,6 @@ export default (generateRound, description) => {
   console.log(`Hello, ${userName}!`);
   console.log(description);
 
-  let result;
   for (let winCount = 0; winCount < 3;) {
     const [userAnswer, correctAnswer] = generateRound();
     console.log(`Your answer: ${userAnswer}`);
@@ -14,9 +13,8 @@ export default (generateRound, description) => {
       return console.log(` '${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
     }
     winCount += 1;
-    result = console.log('Correct!');
+    console.log('Correct!');
 
-    if (winCount === 3) (result = console.log(`Congratulations, ${userName}!`));
+    if (winCount === 3) (console.log(`Congratulations, ${userName}!`));
   }
-  return result;
 };
