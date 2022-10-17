@@ -17,15 +17,15 @@ const generateRound = () => {
 
   const randomProgression = getProgression(start, step, end);
   const indexToReplace = getRandomNum(0, end);
-  const progression = [...randomProgression];
+  const correctAnswer = randomProgression[indexToReplace];
+
   const getRandomHiddenItem = () => {
-    progression.splice(indexToReplace, 1, '..');
-    return progression.toString().replaceAll(',', ' ');
+    randomProgression.splice(indexToReplace, 1, '..');
+    return randomProgression.join(' ');
   };
   const processedQuestion = getRandomHiddenItem();
 
   const question = getAnswer(`Question: ${processedQuestion} `);
-  const correctAnswer = randomProgression[indexToReplace];
 
   return [question, correctAnswer];
 };

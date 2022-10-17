@@ -2,24 +2,23 @@ import gameEngine from '../index.js';
 import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
+const isPrime = (num) => {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 const generateRound = () => {
   const randomNum = getRandomNum();
   const question = getAnswer(`Question: ${randomNum} `);
 
-  const isPrime = (num) => {
-    let result = 'yes';
-    if (num <= 1) {
-      result = 'no';
-      return result;
-    }
-    for (let i = 2; i <= Math.sqrt(num); i += 1) {
-      if (num % i === 0) {
-        result = 'no';
-      }
-    }
-    return result;
-  };
-  const correctAnswer = isPrime(randomNum);
+  const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
