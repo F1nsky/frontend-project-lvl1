@@ -1,10 +1,33 @@
-import engine from '../index.js';
+import gameEngine from '../index.js';
+import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
-import getRandomOperator from '../getRandomOperator.js';
 
-export default (userName) => {
-  const firstOperation = `${getRandomNum()} ${getRandomOperator()} ${getRandomNum()}`;
-  const secondOperation = `${getRandomNum()} ${getRandomOperator()} ${getRandomNum()}`;
-  const thirdOperation = `${getRandomNum()} ${getRandomOperator()} ${getRandomNum()}`;
-  engine(userName, firstOperation, secondOperation, thirdOperation);
+const generateRound = () => {
+  const getRandomOperator = () => {
+    const operators = {
+      0: '+',
+      1: '-',
+      2: '*',
+    };
+    const num = getRandomNum(0, 2);
+
+    return operators[num];
+  };
+
+  const randomNum1 = getRandomNum();
+  const randomNum2 = getRandomNum();
+  const randomOperator = getRandomOperator();
+
+  const question = getAnswer(`Question: ${randomNum1} ${randomOperator} ${randomNum2} `);
+
+  const expressions = {
+    '+': randomNum1 + randomNum2,
+    '-': randomNum1 - randomNum2,
+    '*': randomNum1 * randomNum2,
+  };
+  const correctAnswer = expressions[randomOperator];
+
+  return [question, correctAnswer];
 };
+
+export default () => gameEngine(generateRound, 'What is the result of the expression?');
