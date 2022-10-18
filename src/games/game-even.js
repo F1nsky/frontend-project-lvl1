@@ -5,7 +5,7 @@ import getRandomNum from '../getRandomNum.js';
 const isEven = (num) => (num % 2 === 0);
 
 const generateRound = () => {
-  const randomNum = getRandomNum();
+  const randomNum = getRandomNum(0, 98);
   const question = getAnswer(`Question: ${randomNum} `);
   const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
 

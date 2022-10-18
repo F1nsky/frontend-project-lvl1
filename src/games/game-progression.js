@@ -19,11 +19,8 @@ const generateRound = () => {
   const indexToReplace = getRandomNum(0, end);
   const correctAnswer = randomProgression[indexToReplace];
 
-  const getRandomHiddenItem = () => {
-    randomProgression.splice(indexToReplace, 1, '..');
-    return randomProgression.join(' ');
-  };
-  const processedQuestion = getRandomHiddenItem();
+  randomProgression.splice(indexToReplace, 1, '..');
+  const processedQuestion = randomProgression.join(' ');
 
   const question = getAnswer(`Question: ${processedQuestion} `);
 
