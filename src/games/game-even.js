@@ -1,12 +1,11 @@
 import gameEngine from '../index.js';
-import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
 const isEven = (num) => (num % 2 === 0);
 
 const generateRound = () => {
   const randomNum = getRandomNum(0, 98);
-  const question = getAnswer(`Question: ${randomNum} `);
+  const question = `${randomNum}`;
   const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
 
   return [question, correctAnswer];

@@ -7,7 +7,8 @@ export default (generateRound, description) => {
   console.log(description);
 
   for (let winCount = 0; winCount < 3;) {
-    const [userAnswer, correctAnswer] = generateRound();
+    const [question, correctAnswer] = generateRound();
+    const userAnswer = getAnswer(`Question: ${question} `);
     console.log(`Your answer: ${userAnswer}`);
     if (userAnswer !== correctAnswer.toString()) {
       return console.log(` '${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);

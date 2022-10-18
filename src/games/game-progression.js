@@ -1,5 +1,4 @@
 import gameEngine from '../index.js';
-import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
 const getProgression = (start, step, end) => {
@@ -22,7 +21,7 @@ const generateRound = () => {
   randomProgression.splice(indexToReplace, 1, '..');
   const processedQuestion = randomProgression.join(' ');
 
-  const question = getAnswer(`Question: ${processedQuestion} `);
+  const question = `${processedQuestion}`;
 
   return [question, correctAnswer];
 };

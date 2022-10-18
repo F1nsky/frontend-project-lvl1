@@ -1,5 +1,4 @@
 import gameEngine from '../index.js';
-import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
 const isPrime = (num) => {
@@ -16,7 +15,7 @@ const isPrime = (num) => {
 
 const generateRound = () => {
   const randomNum = getRandomNum();
-  const question = getAnswer(`Question: ${randomNum} `);
+  const question = `${randomNum}`;
   const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return [question, correctAnswer];
 };

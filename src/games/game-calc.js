@@ -1,5 +1,4 @@
 import gameEngine from '../index.js';
-import getAnswer from '../cli.js';
 import getRandomNum from '../getRandomNum.js';
 
 const generateRound = () => {
@@ -18,7 +17,7 @@ const generateRound = () => {
   const randomNum2 = getRandomNum();
   const randomOperator = getRandomOperator();
 
-  const question = getAnswer(`Question: ${randomNum1} ${randomOperator} ${randomNum2} `);
+  const question = `${randomNum1} ${randomOperator} ${randomNum2}`;
 
   const expressions = {
     '+': randomNum1 + randomNum2,
